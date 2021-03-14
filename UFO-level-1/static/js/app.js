@@ -38,12 +38,8 @@ function enter_date_function() {
     } else {
         // Add the data if the date is correct
         filterData.forEach((ufo_siting) => {
-            // add row
             var row = d3.select("tbody").append("tr")
-
-            // go thorugh the filtered data
             Object.entries(ufo_siting).forEach(([key, value]) => {
-                // add cell in each row
                 var cell = row.append("td")
                 cell.text(value)
             })
